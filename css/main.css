@@ -21,3 +21,31 @@
 	display: block;
 }
 
+.specta-page-current {
+	-webkit-animation-duration: 3s;
+	-webkit-animation-name: slidein;
+	animation-duration: 3s;
+	animation-name: slidein;
+}
+
+@keyframes slidein {
+	from {
+		margin: 100%;
+		width: 300%;
+	}
+	to {
+		margin: 0%;
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes slidein {
+	from {
+		margin: 100%;
+		width: 300%;
+	}
+	to {
+		margin: 0%;
+		width: 100%;
+	}
+}
