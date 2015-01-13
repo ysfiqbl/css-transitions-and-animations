@@ -1,0 +1,23 @@
+.pt-page {
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.pt-page-current {
+	width:100%;
+	height:100%;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	visibility: visible;
+	background: red;
+}
+
+.specta-page {
+	display: none;
+}
+
+.specta-page-current {
+	display: block;
+}
+
