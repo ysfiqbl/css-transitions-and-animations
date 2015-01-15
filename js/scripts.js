@@ -6,8 +6,15 @@ $(document).ready(function() {
 		e.preventDefault();
 		var previousSection = currentSection;
 		currentSection = $(this).attr("href");
-		$(previousSection).removeClass('specta-page-current');
-		$(currentSection).addClass('specta-page-current');
+		//$(previousSection).removeClass('specta-page-current');
+		$(previousSection).addClass('specta-page-previous');
+		$(previousSection).on('animationend webkitAnimationEnd', function(e) {
+			$(previousSection).addClass('specta-page-hidden');
+			$(previousSection).removeClass('specta-page-current');
+			alert("Hello");
+			console.log(e.originalEvent);
+			$(currentSection).addClass('specta-page-current');
+		});
 	});
 
 	/**
@@ -19,6 +26,7 @@ $(document).ready(function() {
 		var hrefArray = href.split("#");
 		currentSection = "#".concat(hrefArray.length > 1 ? hrefArray[1] : "home");
 		console.log(currentSection);
+		$(currentSection).addClass('specta-page-hidden');
 		$(currentSection).addClass('specta-page-current');
 	}
 });
