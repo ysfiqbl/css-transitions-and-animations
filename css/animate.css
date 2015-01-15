@@ -1,0 +1,17 @@
+.hello {
+	background: blue;
+}
+
+.world {
+	background: red;
+}
+
+.container > .row > .hello {
+	float:none;
+    display:inline-block;
+}
+
+.container > .row > .world {
+	float:none;
+    display:inline-block;
+}

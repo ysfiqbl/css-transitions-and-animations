@@ -8,10 +8,10 @@ $(document).ready(function() {
 		currentSection = $(this).attr("href");
 		//$(previousSection).removeClass('specta-page-current');
 		$(previousSection).addClass('specta-page-previous');
-		$(previousSection).on('animationend webkitAnimationEnd', function(e) {
+		$(previousSection).on('webkitAnimationEnd', function(e) {
 			$(previousSection).addClass('specta-page-hidden');
 			$(previousSection).removeClass('specta-page-current');
-			alert("Hello");
+			$(previousSection).removeClass('specta-page-previous');
 			console.log(e.originalEvent);
 			$(currentSection).addClass('specta-page-current');
 		});
